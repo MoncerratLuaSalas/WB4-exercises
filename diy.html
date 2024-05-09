@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Mexican Artist</title>
+    <script>
+      let artist = {
+        artistName: "Ariel Camacho",
+        genre: "Regional Mexicano",
+
+        // Method to get artist details
+        getDetails: function () {
+          return "Artist Name: " + this.artistName + ", Genre: " + this.genre;
+        },
+      };
+
+      let artist2 = {
+        artistName: "Tito Doble P",
+        genre: "Corrido Mexicano",
+
+        // Method to get artist details
+        getDetails: function () {
+          return "Artist Name: " + this.artistName + ", Genre: " + this.genre;
+        },
+      };
+
+      // Function to display artist details for both artists
+      function displayArtistsDetails() {
+        let artistDetails1 = artist.getDetails(); // Get details for artist 1
+        let artistDetails2 = artist2.getDetails(); // Get details for artist 2
+
+        // Display artist details in corresponding <div> elements
+        document.getElementById("artistDetails").innerHTML = artistDetails1;
+        document.getElementById("artistDetails2").innerHTML = artistDetails2;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Mexican Artist Generator</h2>
+    <div id="artistDetails"></div>
+    <div id="artistDetails2"></div>
+    <button onclick="displayArtistsDetails()">Show Artists</button>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="studentDropdown">Choose a student:</label>
+    <select id="studentDropdown" name="dropdown"></select>
+    <script>
+      // Array of student names
+      const students = ["Alice", "Bob", "Charlie", "David", "Eva"];
+
+      // Get the dropdown element
+      const dropdown = document.getElementById("studentDropdown");
+
+      //   // Concise version using a for loop
+      //   for (let i = 0; i < students.length; i++) {
+      //     dropdown.innerHTML += `<option value="${students[i]}">${students[i]}</option>`;
+      //   }
+
+
+
+      
+      //   students.forEach((student, index) => {
+      //     dropdown.innerHTML += `<option value="${students[index]}">${students[index]}</option>`;
+      //   });
+
+      students.forEach((student) => {
+        dropdown.innerHTML += `<option value="${student}">${student}</option>`;
+      });
+    </script>
+  </body>
+</html>
